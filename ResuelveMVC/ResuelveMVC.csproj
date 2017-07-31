@@ -44,6 +44,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -124,26 +152,200 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DateTimeExtensions.cs" />
+    <Compile Include="Models\ViewModels\InvoiceValidation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-datetimepicker.css" />
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Calendar\Custom.css" />
+    <Content Include="Content\Calendar\fullcalendar.css" />
+    <Content Include="Content\Calendar\fullcalendar.print.css" />
+    <Content Include="Content\Calendar\ModalMessages.css" />
+    <Content Include="Content\Calendar\StyleLoading.css" />
+    <Content Include="Content\css\bootstrap-datetimepicker.css" />
+    <Content Include="Content\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\css\datePicker.css" />
+    <Content Include="Content\css\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\css\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\datePicker.css" />
+    <Content Include="Content\descarga.png" />
+    <Content Include="Content\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\Imgs\avatardocF.png" />
+    <Content Include="Content\Imgs\avatardocM.png" />
+    <Content Include="Content\Imgs\avatarFemale.png" />
+    <Content Include="Content\Imgs\avatarMale.png" />
+    <Content Include="Content\Imgs\avatarUnknown.png" />
+    <Content Include="Content\Imgs\CaduceusGold.png" />
+    <Content Include="Content\Imgs\CaduceusSilver.jpg" />
+    <Content Include="Content\Imgs\close.png" />
+    <Content Include="Content\Imgs\edit.png" />
+    <Content Include="Content\Imgs\fndDoctor.png" />
+    <Content Include="Content\Imgs\ico-remove-item.png" />
+    <Content Include="Content\Imgs\icon-delete.png" />
+    <Content Include="Content\Imgs\icon-excel2013.png" />
+    <Content Include="Content\Imgs\Icon-mas.png" />
+    <Content Include="Content\Imgs\Icon-menos.png" />
+    <Content Include="Content\Imgs\icon_download.gif" />
+    <Content Include="Content\Imgs\icon_edit.png" />
+    <Content Include="Content\Imgs\icoRecuerdame.png" />
+    <Content Include="Content\Imgs\LinkRequest.png" />
+    <Content Include="Content\Imgs\Lock-Lock-icon.png" />
+    <Content Include="Content\Imgs\logoRecuerdame.png" />
+    <Content Include="Content\Imgs\Logo_font14.png" />
+    <Content Include="Content\Imgs\Logo_font24.png" />
+    <Content Include="Content\Imgs\Logo_font40.png" />
+    <Content Include="Content\Imgs\Logo_font60.png" />
+    <Content Include="Content\Imgs\Logo_font8.png" />
+    <Content Include="Content\Imgs\lupa.png" />
+    <Content Include="Content\Imgs\medicinapng.jpg" />
+    <Content Include="Content\Imgs\mensagem-alerta.png" />
+    <Content Include="Content\Imgs\mensagem-erro.png" />
+    <Content Include="Content\Imgs\mensagem-info.png" />
+    <Content Include="Content\Imgs\mensagem-sucesso.png" />
+    <Content Include="Content\Imgs\PatientF.ico" />
+    <Content Include="Content\Imgs\PatientM.ico" />
+    <Content Include="Content\Imgs\plus.png" />
+    <Content Include="Content\Imgs\RedesSociales\delicious.png" />
+    <Content Include="Content\Imgs\RedesSociales\deviantart.png" />
+    <Content Include="Content\Imgs\RedesSociales\digg.png" />
+    <Content Include="Content\Imgs\RedesSociales\dribbble.png" />
+    <Content Include="Content\Imgs\RedesSociales\facebook.png" />
+    <Content Include="Content\Imgs\RedesSociales\flickr.png" />
+    <Content Include="Content\Imgs\RedesSociales\google.png" />
+    <Content Include="Content\Imgs\RedesSociales\instagram.png" />
+    <Content Include="Content\Imgs\RedesSociales\lastfm.png" />
+    <Content Include="Content\Imgs\RedesSociales\pinterest.png" />
+    <Content Include="Content\Imgs\RedesSociales\rss.png" />
+    <Content Include="Content\Imgs\RedesSociales\stumbleupon.png" />
+    <Content Include="Content\Imgs\RedesSociales\tumblr.png" />
+    <Content Include="Content\Imgs\RedesSociales\twitter.png" />
+    <Content Include="Content\Imgs\RedesSociales\vimeo.png" />
+    <Content Include="Content\Imgs\RedesSociales\youtube.png" />
+    <Content Include="Content\Imgs\smallWaiting.gif" />
+    <Content Include="Content\Imgs\stock_doctor_big.png" />
+    <Content Include="Content\Imgs\stock_doctor_female_big.png" />
+    <Content Include="Content\Imgs\YellowStar.png" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\AlexBrush-Regular.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\opensans-regular-webfont.woff" />
+    <Content Include="fonts\Oswald-Bold.ttf" />
+    <Content Include="fonts\Oswald-Light.ttf" />
+    <Content Include="fonts\Oswald-Regular.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Calendar\DropDownLists.js" />
+    <Content Include="Scripts\Calendar\PopUpAndFunctionsDoctor.js" />
+    <Content Include="Scripts\Calendar\PopUpAndFunctionsPatient.js" />
+    <Content Include="Scripts\Calendar\SetModes.js" />
+    <Content Include="Scripts\CheckBox\bootstrap-checkbox.js" />
+    <Content Include="Scripts\datetimepicker-init.js" />
+    <Content Include="Scripts\fullcalendar.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-confirm\css\jquery-confirm.less" />
+    <Content Include="Scripts\jquery-confirm\demo\libs\fonts\fontawesome-webfont.eot" />
+    <Content Include="Scripts\jquery-confirm\demo\libs\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Scripts\jquery-confirm\demo\libs\fonts\fontawesome-webfont.woff" />
+    <Content Include="Scripts\jquery-confirm\demo\libs\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Scripts\jquery-confirm\demo\libs\fonts\FontAwesome.otf" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\package.json" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-confirm\css\jquery-confirm.css" />
+    <Content Include="Scripts\jquery-confirm\demo\demo.css" />
+    <Content Include="Scripts\jquery-confirm\demo\demo.js" />
+    <Content Include="Scripts\jquery-confirm\demo\libs\bundled.css" />
+    <Content Include="Scripts\jquery-confirm\demo\libs\bundled.js" />
+    <Content Include="Scripts\jquery-confirm\demo\libs\fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\jquery-confirm\demo\logo-name.svg" />
+    <Content Include="Scripts\jquery-confirm\dist\jquery-confirm.min.css" />
+    <Content Include="Scripts\jquery-confirm\dist\jquery-confirm.min.js" />
+    <Content Include="Scripts\jquery-confirm\js\jquery-confirm.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\AUTHORS.txt" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\external\jquery\jquery.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_444444_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_555555_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_777620_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_777777_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\index.html" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.structure.css" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.structure.min.css" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.theme.css" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\jquery-ui.theme.min.css" />
+    <Content Include="Scripts\jquery-ui-1.12.1.custom\LICENSE.txt" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Loading\GenericFunctions.js" />
+    <Content Include="Scripts\Loading\jquery.isloading.js" />
+    <Content Include="Scripts\Loading\jquery.simplemodal.js" />
+    <Content Include="Scripts\Loading\modal.js" />
+    <Content Include="Scripts\locale-all.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\PhoneNumber\css\demo.css" />
+    <Content Include="Scripts\PhoneNumber\css\intlTelInput.css" />
+    <Content Include="Scripts\PhoneNumber\img\flags%402x.png" />
+    <Content Include="Scripts\PhoneNumber\img\flags.png" />
+    <Content Include="Scripts\PhoneNumber\js\intlTelInput.js" />
+    <Content Include="Scripts\PhoneNumber\js\intlTelInput.min.js" />
+    <Content Include="Scripts\PhoneNumber\js\utils.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -158,13 +360,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

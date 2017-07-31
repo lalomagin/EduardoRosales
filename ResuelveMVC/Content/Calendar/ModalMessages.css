@@ -1,0 +1,785 @@
+﻿    @-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+    #ModalMessagecontent {
+        box-sizing: border-box;
+        height: 50%;
+        margin: auto;
+    }
+
+    #MessageModal {
+        font-family: Helvetica,Arial,Tahoma;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    #imgModalLayoutClose:hover {
+        background-color: grey;
+    }
+
+    #DivModalLayout {
+        width: 800px;
+        background-color: white;
+        box-sizing: border-box;
+        margin: auto;
+        font-family: Helvetica,Arial,Tahoma;
+        position: relative;
+    }
+
+    #DivModalLayoutHead {
+        box-sizing: border-box;
+        background: #07579B;
+        color: #FFF;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 8px 12px;
+        height: 45px;
+        width: 100%;
+        font-family: Helvetica,Arial,Tahoma;
+    }
+
+    #SpanModalLayoutTitle {
+        float: left;
+        margin-top: 9px;
+    }
+
+    #imgModalLayoutClose {
+        box-sizing: border-box;
+        float: right;
+        margin: 5px;
+    }
+
+    #DivModalLayoutContent {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5px 25px;
+    }
+
+
+    .HierarchyItemButton {
+        background: #444;
+        margin: 0 5px;
+        border-left: solid 4px #b9c42b;
+        color: #FFF !important;
+        padding: 8px 30px;
+        text-decoration: none;
+        border-right: none;
+        border-bottom: none;
+        border-top: none;
+    }
+
+    .ModalVerde {
+        background-color: #449d44 !important;        
+    }
+
+    .ModalVerdebtn {
+        border-left: solid 4px #449d44 !important;
+        border-radius: 4px;
+        
+    }
+
+    .ModalRojo {
+        background-color: #ff0000 !important;
+    }
+
+    .ModalRojobtn {
+        border-left: solid 4px #ff0000 !important;
+        border-radius: 4px;
+    }
+
+    .ModalAzul {
+        background-color: #07579B !important;
+        border-left: solid 4px #07579B !important;
+    }
+
+    .ModalAzulbtn {
+        border-left: solid 4px blue !important;
+        border-radius: 4px;
+    }
+
+     .ModalConfirmbtnYes {
+       border-left: solid 4px #b9c42b !important;
+       border-radius: 4px;
+    }
+
+    .ModalRojo {
+        background-color: #ff0000 !important;
+    }
+
+    .ModalConfirmbtnNo {
+        border-left: solid 4px #ff0000 !important;
+        border-radius: 4px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /******************** MODAL *****************/
+.modal {
+    display: none;
+}
+
+.modal-close {
+    background: url(/Content/Imgs/close.png) 0 0 no-repeat;
+    width: 20px;
+    height: 20px;
+    display: block;
+    right: 5px;
+    top: 5px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#fundoModal {
+    z-index: 995;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background: #000;
+}
+
+.titulo-modal-azul {
+    background: #07579B;
+    color: #FFF;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 12px;
+}
+
+.arvore-modal {
+    width: 900px;
+}
+
+    .arvore-modal .arvore-nivel1 {
+        margin-top: 0;
+    }
+
+.tabela-modal {
+    width: 800px;
+    margin: 20px 20px 0 20px;
+}
+
+    .tabela-modal TABLE {
+        width: 100%;
+    }
+
+    .tabela-modal TH {
+        width: 20% !important;
+    }
+
+    .tabela-modal A {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .tabela-modal A {
+        color: #000;
+    }
+
+#ModalMessages .bloco-campo-form {
+    height: 48px;
+}
+
+    #ModalMessages .bloco-campo-form INPUT[type=text] {
+        width: 165px;
+    }
+
+.modal-checklist .conteudo-modal {
+    padding: 20px 0;
+}
+
+.modal-checklist .botoes {
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.conteudo-modal-posicoes INPUT[type=image] {
+    margin: 15px 0 0 10px;
+}
+
+    .conteudo-modal-posicoes INPUT[type=image]:hover {
+        background-color: transparent;
+    }
+
+.modal-checklist .botoes A {
+    margin-left: 10px;
+}
+
+.modal-cancelar-justificativa textarea {
+    display: block;
+    width: 400px;
+    height: 100px;
+}
+
+.modal-justificativa .conteudo-modal {
+    padding: 15px;
+}
+
+.modal-justificativa .botoes {
+    margin-top: 5px;
+}
+
+.modal-justificativa .botao-acao {
+    float: right;
+}
+/*mensagens modal*/
+
+.modal-mensagem-conteudo .imagem {
+    float: left;
+    width: 62px;
+    height: initial;
+    min-height: 60px;
+    margin-left: 20px;
+}
+
+.modal-mensagem-conteudo .msg {
+    float: left;
+    width: 250px;
+    padding: 8px 12px;
+    font-weight: bold;
+    color: #555;
+}
+
+.modal-mensagem-conteudo H3 {
+    color: #FFF;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    margin-bottom: 20px;
+}
+
+.modal-erro H3 {
+    background: #d00000;
+}
+
+.modal-erro A {
+    border-color: #d00000;
+}
+
+.modal-erro .imagem {
+    background: url(/Content/Imgs/mensagem-erro.png) 50% 50% no-repeat;
+}
+
+.modal-info H3 {
+    background: #002d9f;
+}
+
+.modal-info A {
+    border-color: #002d9f;
+}
+
+.modal-info .imagem {
+    background: url(/Content/Imgs/mensagem-info.png) 50% 50% no-repeat;
+}
+
+.modal-alerta H3 {
+    background: #fbca17;
+}
+
+.modal-alerta .imagem {
+    background: url(/Content/Imgs/mensagem-alerta.png) 50% 50% no-repeat;
+}
+
+.modal-alerta A {
+    border-color: #fbca17;
+}
+
+.modal-sucesso H3 {
+    background: #b9c42b;
+}
+
+.modal-sucesso A {
+    border-color: #b9c42b;
+}
+
+.modal-sucesso .imagem {
+    background: url(/Content/Imgs/mensagem-sucesso.png) 50% 50% no-repeat;
+}
+
+.modal-worklist {
+    width: 400px;
+    height: 250px;
+}
+
+.modal-worklist .modal-mensagem-conteudo .msg {
+    float: none;
+    width: 250px;
+    padding: 8px 12px;
+    font-weight: bold;
+    color: #555;
+}
+
+.modal-worklist H3 {
+    background: #b9c42b;
+}
+
+.modal-worklist A {
+    border-color: #b9c42b;
+}
+
+
+.modal-mensagem-confirma .msg {
+    width: 350px;
+    height: 130px;
+}
+
+.modal-mensagem-confirma UL {
+    margin: 20px;
+    list-style: disc;
+}
+
+.modal-mensagem-confirma H3 {
+    background: #fbca17;
+}
+
+.modal-mensagem-confirma .imagem {
+    background: url(/Content/Imgs/mensagem-alerta.png) 50% 50% no-repeat;
+}
+
+.modal-mensagem-confirma .botoes-modal {
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+    .modal-mensagem-confirma .botoes-modal A {
+        float: left;
+        margin: 0 30px;
+    }
+
+        .modal-mensagem-confirma .botoes-modal A:first-child {
+            margin-left: 92px;
+        }
+
+
+
+
+.botao-fechar-mensagem {
+    display: block;
+    width: 40px;
+    margin: 15px 0 30px 122px;
+}
+
+/*fim mensagem modal*/
+
+
+.lista-documentos-necessarios {
+    width: 94%;
+    margin: 0 auto;
+}
+
+    .lista-documentos-necessarios LI {
+        line-height: 24px;
+        height: 24px;
+        max-height: 24px;
+        overflow: hidden;
+    }
+
+        .lista-documentos-necessarios LI DIV {
+            float: left;
+        }
+
+            .lista-documentos-necessarios LI DIV:first-child {
+                margin-left: 10px;
+                width: 15px;
+                height: 20px;
+                margin-right: 10px;
+            }
+
+.obrigatorio-sim {
+    background: url("/Content/Imgs/obrigatorio.png") 0 6px no-repeat;
+}
+
+.botao-enviar-anexo, .lista-de-uploads, .lista-de-anexos {
+    margin-top: 20px;
+}
+
+
+/*CHECKLIST*/
+
+.campos-lado-foto {
+    float: left;
+    max-width: 550px;
+}
+
+.campos-lado-foto-pt {
+    float: left;
+    max-width: 600px;
+}
+
+.div-photo {
+    float: right;
+    width: 450px;
+    max-width: 350px;
+}
+
+    .div-photo IMG {
+        max-width: 300px;
+        max-height: 230px;
+        background: #f2f2f2;
+        border: solid 1px #e5e5e5;
+        padding: 10px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+.div-photo-pt {
+    float: right;
+    width: 345px;
+    max-width: 345px;
+}
+
+    .div-photo-pt IMG {
+        max-width: 300px;
+        max-height: 230px;
+        background: #f2f2f2;
+        border: solid 1px #e5e5e5;
+        padding: 10px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+.lblfoto {
+    font-family: "open_sansregular";
+    font-size: 14px;
+}
+
+.modal-checklist-pt H3, .modal-checklist-pt LEGEND {
+    font-family: "open_sansregular";
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.modal-checklist-pt .box-form H3 {
+    margin-left: 30px;
+}
+
+.modal-checklist-pt .bloco-campo-docs {
+    margin-left: 30px;
+}
+
+    .modal-checklist-pt .bloco-campo-docs table {
+        width: 97%;
+        margin: 0 0 20px 0;
+    }
+
+.modal-checklist-pt {
+    min-width: 980px;
+    max-width: 980px;
+    width: 980px;
+}
+
+    .modal-checklist-pt .botoes {
+        margin-right: 20px;
+    }
+
+    .modal-checklist-pt .lista-documentos-necessarios table {
+        width: 100%;
+    }
+
+    .modal-checklist-pt .box-form {
+        min-height: 300px;
+        margin-top: 0px;
+        padding-top: 20px;
+    }
+
+
+
+    /******************** MODAL *****************/
+
+
+
+/******************** BOTONES *****************/
+
+.botao-acao {
+    background: #444;
+    border-left: solid 4px #4ba872;
+    color: #FFF !important;
+    padding: 8px 30px;
+    text-decoration: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+}
+
+    .botoes-dir .botao-acao {
+        float: right;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+.botao-acao:hover, .botao-movimentacao:hover, .botao-contratacao:hover, .botao-azul:hover, .botao-desligamento:hover, .botao-buscar-filtro:hover {
+    background: #000;
+}
+
+/******************** BOTONES *****************/
+
+
+/******************** GRID *****************/
+table.TATable {
+    border-spacing: 0;
+    border: solid 1px #e5e5e5;
+    width: 775px;
+    table-layout: fixed;
+    border-radius: 0.4em;
+    overflow: hidden;
+}
+table.TATable thead th {
+    padding: 3px 5px 3px 5px;
+    background:#2F75B5;
+    color: #FFF;
+    text-align:center;
+    height: 30px;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+table.TATable TD {
+    color: #333;
+    padding: 3px 0px 3px 0px;
+    text-align: center;
+    vertical-align: middle;
+    overflow:hidden;
+    white-space:nowrap;
+}
+table.TATable td:last {
+    width:10px;
+}
+table.TATable tr.odd { background-color: rgb(249, 249, 249);}
+table.TATable tr.even { background-color: rgb(255, 255, 255); }
+table.TATable tr:hover { background: #CEE7FF; }
+/******************** GRID *****************/
+
+
+
+/******************** ACCIONES *****************/
+a.EditButtonList 
+{
+    padding:0;
+    width:24px;
+    height:24px;
+    background:transparent url('/Content/Imgs/icon_edit.png') center center  no-repeat;
+    float:left;
+}
+a.DeleteButtonList 
+{
+    padding:0;
+    width:24px;
+    height:24px;
+    background:transparent url('/Content/Imgs/icon-delete.png') center center  no-repeat;
+    float:right;
+}
+a.ExcelButtonList
+{
+    padding:0;
+    width:24px;
+    height:24px;
+    background:transparent url('/Content/Imgs/microsoft-excel-2013.png') center center  no-repeat ;
+    background-size: 25px 25px;
+    float:right;
+}
+
+
+.BtnEdit {
+        background: url('/Content/Imgs/icon_edit.png') no-repeat transparent;
+    padding: 0;
+        border-width: 0px;
+        cursor: pointer;
+        width: 20px;
+        cursor: pointer;
+    }
+
+.BtnLupa {
+        background: url('/Content/Imgs/lupa.png') no-repeat transparent;
+    padding: 0;
+        border-width: 0px;
+        cursor: pointer;
+        width: 20px;
+        cursor: pointer;
+    }
+
+    .BtnLink {
+        background: url('/Content/Imgs/LinkRequest.png') no-repeat transparent;
+        background-size: contain;
+        padding: 0;
+        border-width: 0px;
+        cursor: pointer;
+        width: 20px;
+        cursor: pointer;
+
+    }
+    .BtnPermissions {
+        background: url('/Content/Imgs/candado.png') no-repeat transparent;
+        background-size: contain;
+        padding: 0;
+        border-width: 0px;
+        cursor: pointer;
+        width: 20px;
+        cursor: pointer;
+
+    }
+
+    .BtnDelete {
+        background: url('/Content/Imgs/icon-delete.png') no-repeat transparent;
+        background-size: contain;
+        padding: 0;
+        border-width: 0px;
+        cursor: pointer;
+        width: 20px;
+        cursor: pointer;
+    }
+
+
+    .LnkDownload {
+        background:transparent url('/Content/Imgs/icon_download.gif') center center  no-repeat;
+        padding: 0;
+        border-width: 0px;
+        width: 24px;
+        height: 24px;        
+        cursor: pointer;
+            float: left;
+    }
+
+/******************** ACCIONES *****************/
+
+
+
+div.InputSearchText
+{
+    position: relative;
+}
+div.InputSearchText > A.SearchLanIdButton
+{
+    padding: 0;
+    margin: 4px -340px;
+    width: 24px;
+    height: 24px;
+    background: transparent url('/Content/Imgs/lupa.png') center center no-repeat;
+    /*background: transparent url('../../Images/lupa.png') center center no-repeat;*/
+    float: right;
+}
+div.InputSearchText > div.LoadingLanId
+{
+    width: 19px;
+    height: 19px;
+    background: transparent url('/Content/Imgs/smallWaiting.gif') center center no-repeat;
+    position: absolute;
+    top: 6px;
+    left: 164px;
+    display: none;
+}
+
+/***************************PAGINGATION*****************************/
+div.pagination {
+	padding: 7px 0px;
+	text-align:left;
+	font-family:Tahoma,Helvetica,sans-serif;
+	font-size:.90em;
+}
+	
+div.pagination a {
+	border: 1px solid #ccdbe4;
+	margin-right:3px;
+	padding:2px 8px;
+
+	background-position:bottom;
+	text-decoration: none;
+
+	color: #0061de;		
+}
+div.pagination a:hover, div.pagination a:active {
+	border: 1px solid #2b55af;
+	background-image:none;
+	background-color:#3666d4;
+	color: #fff;
+}
+div.pagination a.current {
+    border: 1px solid #DCDBDB;
+    background-color: #EFEFEF;
+    cursor: default;
+	margin-right:3px;
+	padding:2px 6px;		
+	font-weight: bold;
+    color:#4D4E4E;
+}
+div.pagination a.current :hover {
+
+}
+div.pagination span.disabled {
+	display:none;
+}
+div.pagination a.next{
+	border:1px solid #ccdbe4;
+	margin:0 0 0 10px;
+}
+div.pagination a.next:hover{
+	border:1px solid #2b55af;
+}
+div.pagination a.prev{
+	border:1px solid #ccdbe4;
+	margin:0 10px 0 0;
+}
+div.pagination a.prev:hover{
+	border:1px solid #2b55af;
+}
+/***************************PAGINGATION*****************************/
+
+
+
+/***************************FIELDSET*****************************/
+.Customized FIELDSET {
+    background: #FAFAFA;
+    border: solid 1px skyblue;
+    padding: 10px;
+    margin: 20px 0;
+}
+ .Customized FIELDSET LEGEND {            
+         color: #444;
+    text-align: left;
+ }
+  .Customized FIELDSET LEGEND label {            
+background-color: steelblue;
+    border: solid 1px silver;
+    color: white;
+    padding: 1px 5px;
+ }
+
+ .Customized FIELDSET div {        
+     min-width: 70px;        
+     text-align: left;        
+     font-size: 12px;        
+     color: graytext;    
+ }
+
+  .Customized FIELDSET div div {        
+     text-align: left;        
+     font-size: 10px;        
+     color: GrayText; 
+     margin-left:5px;   
+     margin-top:5px;
+ }
+
+.Customized ul li {
+    text-align: left;  
+    vertical-align:middle;               
+    color: GrayText;  
+}
+/***************************FIELDSET*****************************/

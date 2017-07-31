@@ -1,0 +1,329 @@
+nav.u-reset, ol.u-reset, ul.u-reset {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.ListItemRev:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+
+.ListItemRev--context {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.ListItemRev {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+/*li.liRev {
+    line-height: 18px;
+}*/
+
+.Speech {
+    position: relative;
+    min-height: 36px;
+    padding-left: 51px;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+
+a.PhotoWrapper {
+    text-decoration: none;
+}
+
+.PhotoWrapper--smaller, .PhotoWrapper-user--smaller {
+    width: 36px;
+    height: 36px;
+}
+
+.PhotoWrapper {
+    position: relative;
+    display: block;
+}
+
+.Speech-memberPhoto {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+}
+
+.PhotoWrapper-user {
+    border-radius: 50%;
+}
+
+.PhotoWrapper--smaller, .PhotoWrapper-user--smaller {
+    width: 36px;
+    height: 36px;
+}
+
+.Speech-content {
+    font-size: 14px;
+    line-height: 20px;
+    word-wrap: break-word;
+}
+
+.Rating-grade {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.Rating-grade--5::before {
+    background: green;
+}
+.Rating-grade--4::before {
+    background: limegreen;
+}
+.Rating-grade--3::before {
+    background: lightseagreen;
+}
+.Rating-grade--2::before {
+    background: orange;
+}
+.Rating-grade--1::before {
+    background: orangered;
+}
+
+.Rating-grade::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.Speech-info {
+    margin-top: 5px;
+    line-height: 1;
+    text-align: right;
+}
+
+    .Speech-date {
+        color: #ADAFAF;
+        font-size: 12px;
+    }
+
+.tooltip-inner {
+  max-width: 500px !important;  
+  padding: 10px !important;
+}
+
+.loader {
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid #3498db;
+    width: 26px;
+    height: 26px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+    .Rating-rightOfReply {
+        margin-top: 15px;
+    }
+
+    .answer-blockquote {
+    border: none;
+    margin: 0;
+    background-color: #f2f2f2;
+    padding: 9px;
+    word-wrap: break-word;
+    border-radius: 3px;
+}
+
+    .u-gray {
+    color: #727272 !important;
+}
+
+
+
+
+    .btn-circle {
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+    .ScrollYVisible {
+        overflow-x: hidden;
+        overflow-y: scroll;    
+        padding:0px 20px 0px 20px;
+        text-align: left;
+       }
+
+
+    .tamConBigDetDoc {
+        height: 300px;
+        width: 100%;
+       }
+
+    
+
+    .DivDoctorType {
+        width: 100%;
+        padding: 0px 15px 0px 15px;
+        height: auto;
+        margin-top: 10px;
+        -webkit-box-shadow: -1px 0px 9px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px -1px 9px -1px rgba(0,0,0,0.1);
+        box-shadow: -1px 0px 9px -1px rgba(0,0,0,0.10);
+    }
+
+    td.RegPatIzq {
+        text-align: right;
+        vertical-align: middle;
+    }
+
+    td.RegPatRig {
+        text-align: left;
+        padding: 13px 0px 13px 10px;
+        vertical-align: top;
+    }
+
+    .ImgEdit {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        background-color: transparent;
+        width: 18px;
+    }
+
+        .ImgEdit:hover {
+            cursor: pointer;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+            width: 20px;
+        }
+
+    .BigTam {
+        width: 68%;
+    }
+
+    .MediumTam {
+        width: 50%;
+    }
+
+    .WithPads {
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        position: relative;
+        float: left;
+    }
+
+    .WithPadLeft {
+        min-height: 1px;
+        padding-left: 15px;
+        position: relative;
+        float: left;
+    }
+
+    .TitleLabels {
+        font-size: 17px;
+    }
+
+
+    .RowWithTop {
+        padding-top: 8px;
+    }
+
+    .NoRight {
+        /*padding-right: 0px;*/
+    }
+
+
+
+
+    .TableCommon {
+        width: 100%;
+    }
+
+        .TableCommon td {
+            padding-bottom: 10px;
+        }
+
+    #calendar div.fc-view-container {
+        box-shadow: 0 7px 7px rgba(0,0,0,.4);
+        -webkit-box-shadow: 0 7px 7px rgba(0,0,0,.4);
+    }
+
+    #calendar div.fc-toolbar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .FontSmall {
+        font-size: small;
+        font-family: arial,sans-serif;
+        margin-bottom: 0px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    .RotateHoriz {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+    }
+
+    #DivModalWithLayout, #divBigPatientDetail, #divBigDoctorDetail {
+        border-radius: 6px !important;
+        overflow: hidden !important;
+    }
+
+    .SquareDetail label, img:hover {
+        cursor: pointer;
+    }
+
+    .SquareDetail:first-child {
+        color: cadetblue;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    background-color: aliceblue;
+    }
+
+    .SquareDetail:first-child:hover {
+        color: cadetblue;
+        background-color: mintcream;
+        box-shadow: 0px 2px 9px 5px rgba(0,0,0,0.16),0px 2px 10px 4px rgba(0,0,0,0.12)!important;
+        border-radius: 4px;        
+        /*z-index: 1000;*/
+    /*cursor: pointer;*/    
+    }

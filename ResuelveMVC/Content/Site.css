@@ -3,6 +3,7 @@
     padding-bottom: 20px;
 }
 
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -17,8 +18,307 @@
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
+/*input,
 select,
 textarea {
     max-width: 280px;
+}*/
+
+
+@font-face{
+    font-family:Circular;
+    src:url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-light.woff2') format('woff2'),url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-light.woff') format('woff');
+    font-weight:300;
+    font-style:normal
+
 }
+
+@font-face{
+    font-family:Circular;
+    src:url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-book.woff2') format('woff2'),url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-book.woff') format('woff');
+    font-weight:400;
+    font-style:normal
+}
+
+@font-face{
+    font-family:Circular;
+    src:url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-medium.woff2') format('woff2'),url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-medium.woff') format('woff');
+    font-weight:500;
+    font-style:normal
+}
+
+@font-face{
+    font-family:Circular;
+    src:url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-bold.woff2') format('woff2'),url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-bold.woff') format('woff');
+    font-weight:700;
+    font-style:normal
+}
+
+@font-face{
+    font-family:Circular;
+    src:url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-black.woff2') format('woff2'),url('https://sp-bootstrap.global.ssl.fastly.net/7.3.0/fonts/circular-black.woff') format('woff');
+    font-weight:900;
+    font-style:normal
+}
+
+
+@font-face {
+    font-family: FontCursiva;
+    src: url(../fonts/AlexBrush-Regular.ttf);
+}
+
+@font-face {
+    font-family: FontOswald;
+    src: url(../fonts/Oswald-Bold.ttf);
+}
+
+@font-face {
+    font-family: FontOswaldRegular;
+    src: url(../fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: FontOswaldLight;
+    src: url(../fonts/Oswald-Light.ttf);
+}
+
+
+
+.animated {
+    			-webkit-transition: height 0.2s;
+				-moz-transition: height 0.2s;
+				transition: height 0.2s;
+			}
+
+
+#parallaxLogin {
+    border-top-width:0px; 
+    background-image: url('/Content/images/Parallax/Plantillas/RosaPastel/parallax-2-Rosas.jpg'); 
+    background-position: 50% 0px;
+}
+
+
+
+nav.MainMenu {
+    padding-left: 0px; 
+    padding-right: 0; 
+    display: block !important; 
+    height: auto !important; 
+    padding-bottom: 0; 
+    overflow: visible !important; 
+    box-shadow: none; 
+    width: auto; 
+    border-top: 0; 
+    list-style:none; 
+    float:right; 
+}
+
+nav.MainMenu ul {
+    color: #a0c3d2; 
+    font-family: Circular,Helvetica,Arial,sans-serif; 
+    font-size: 16px; 
+    line-height: 1.5; 
+    margin:0px;     
+}
+
+nav.MainMenu ul li.LIOption {
+    float: left; 
+    position: relative; 
+    display: block;
+}
+
+nav.MainMenu ul li.LISeparator {
+    background-color: #c1c3c6; 
+    margin-top: 32px; 
+    margin-bottom: 32px; 
+    height: 16px; 
+    width: 2px; 
+    margin-left: 17px; 
+    margin-right: 17px; 
+    float: left;
+}
+
+nav.MainMenu ul li.LIOption a {    
+    padding: 28px 17px; 
+    font-size: 16px; 
+    font-weight: 500; 
+    line-height: 24px; 
+    text-decoration: none; 
+    background-color: transparent; 
+    float: left; 
+    position: relative; 
+    display: block;
+}
+
+    nav.MainMenu ul li.LIOption a.Gray {
+    color: #c1c3c6;
+    }
+
+    nav.MainMenu ul li.LIOption a.White {
+    color: #fff;
+    }
+
+    nav.MainMenu ul li.LIOption a.Selected {
+    color: #9bf0e1;
+    }
+
+nav.MainMenu ul li.LIOption a:hover {
+    color: #9bf0e1;
+    transition: color 0.5s;
+}
+
+
+
+.footer .nav-title {
+    margin: 20px 0;
+}
+
+
+.footer .nav-title {
+    color: #919496;
+    font-size: 12px;
+    letter-spacing: .08em;
+    margin: 50px 0 22px;
+    text-transform: uppercase;
+}
+
+.nav, .nav-inverse {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+
+.footer .nav-title {
+    margin: 20px 0;
+}
+
+.footer .nav-title {
+    color: #919496;
+    font-size: 12px;
+    letter-spacing: .08em;
+    /*margin: 50px 0 22px;*/
+    text-transform: uppercase;
+}
+
+.footer-default .nav a, .footer-default .nav-inverse a {
+    color: #fff;
+}
+
+.footer .col-social a {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.footer .nav a, .footer .nav-inverse a {
+    font-size: 16px;
+    font-weight: 500;
+    padding: .1875em 0;
+    margin-bottom: .75em;
+    display: inline-block;
+}
+
+
+
+
+.footer-default .col-social a {
+    background: #2e2f33;
+}
+
+.footer-default .col-social a .social-icon {
+    fill: #fff;
+}
+
+.footer .col-social a .social-icon {
+    width: 24px;
+    height: 24px;
+    -webkit-transition: fill .2s;
+    -o-transition: fill .2s;
+    transition: fill .2s;
+    display: block;
+}
+
+
+.footer .col-social a .social-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+
+.footer .col-social li:first-child {
+    padding-left: 0;
+}
+
+.footer .col-social li {
+    float: left!important;
+    padding-left: 15px;
+}
+
+.footer .col-social a:focus, .footer .col-social a:hover {
+    text-decoration: none;
+    background-color: darkmagenta;
+}
+
+.control-label1 {
+
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: left;
+    width: 140px;
+
+}
+
+
+.col-md-10 {
+width:50%;
+
+}
+
+
+.NoMarginLeft input[type=checkbox]{
+margin-left:0px !important;
+}
+
+.WidthCien{
+width:100% !important;
+}
+
+.divider {
+    border-top: 1px solid #d9dadc;
+    display: block;
+    line-height: 1px;
+    margin: 15px 0;
+    position: relative;
+    text-align: center;
+    width: 46%;
+    float: left;
+}
+
+.dividerfull {
+    border-top: 1px solid #d9dadc;
+    display: block;
+    line-height: 1px;
+    margin: 15px 0;
+    position: relative;
+    text-align: center;
+    width: 100%;    
+}
+
+
+.divider .divider-title {
+    background: #fff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+
